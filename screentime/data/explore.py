@@ -1,17 +1,5 @@
 import sqlite3
-
-PATH = "/Users/richardkyle/Library/Application Support/Knowledge"
-BASE = "knowledgeC.db"
-SHM = "knowledgeC.db-shm"
-WAL = "knowledgeC.db-wal"
-
-
-def connect(file_name: str) -> sqlite3.Connection:
-    """
-    Connects to the database and returns a connection object
-    """
-    conn = sqlite3.connect(f"{PATH}/{file_name}")
-    return conn
+from screentime.data.connection import connect
 
 
 def get_table_names(conn: sqlite3.Connection) -> list:
