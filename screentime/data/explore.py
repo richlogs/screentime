@@ -1,5 +1,5 @@
 import sqlite3
-from screentime.data.connection import connect
+from screentime.data.connection import Connection
 
 
 def get_table_names(conn: sqlite3.Connection) -> list:
@@ -14,5 +14,5 @@ def get_table_names(conn: sqlite3.Connection) -> list:
 
 
 if __name__ == "__main__":
-    with connect(BASE) as conn:
+    with Connection() as conn:
         print(get_table_names(conn))
