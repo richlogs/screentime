@@ -1,0 +1,18 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.3  # Ensure this is the version you want to use
+    hooks:
+      # Run the linter with autofix enabled.
+      - id: ruff
+        args: [--fix]
+
+
+repos:
+  # - repo: ...
+
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v3.4.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+        args: []
